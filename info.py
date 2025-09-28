@@ -60,10 +60,10 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "movieforu")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 
 #stream link shortner
-STREAM_SITE = (environ.get('STREAM_SITE', 'sharedisklinks.com'))
-STREAM_API = (environ.get('STREAM_API', '587f94f0e0b1813a52aed61290af6ea79d6ee464'))
-STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/Hoe/69'))
-STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "False")), False)
+STREAM_SITE = (environ.get('STREAM_SITE', ''))
+STREAM_API = (environ.get('STREAM_API', ''))
+STREAM_HTO = (environ.get('STREAMHTO', 'https://t.me/MzMoviiez'))
+STREAM_MODE = is_enabled((environ.get('STREAM_MODE', "True")), False)
 
 
 #verify site api and url
@@ -124,7 +124,7 @@ if 'DYNO' in environ:
     APP_NAME = environ.get('APP_NAME')
 else:
     ON_HEROKU = False
-BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
+BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', 'loud-robby-moviesforyou-aacbd20f.koyeb.app/'))
 FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'.herokuapp.com'
 URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "https://{}:{}/".format(FQDN, PORT)
