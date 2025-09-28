@@ -46,7 +46,7 @@ LIMIT_MODE = is_enabled((environ.get('LIMIT_MODE', 'True')), False)
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1997617981').split()]
-OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Safaridev") # widout 👉 @
+OWNER_USER_NAME = environ.get("OWNER_USER_NAME", "Movies4uhd14") # widout 👉 @
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002809601330').split()]
 # post channel auto post new movie
 POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002696692504').split(','))))
@@ -56,7 +56,7 @@ NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Anant:Anant@movieforu.09ibn.mongodb.net/?retryWrites=true&w=majority&appName=Movieforu")
-DATABASE_NAME = environ.get('DATABASE_NAME', "movies4u")
+DATABASE_NAME = environ.get('DATABASE_NAME', "movieforu")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Safaribotts')
 
 #stream link shortner
