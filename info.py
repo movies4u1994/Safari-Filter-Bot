@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = int(environ.get('API_ID', "29761749"))
 API_HASH = environ.get('API_HASH', "a18b40e995d5b74ec633a0cfdfa8e175")
-BOT_TOKEN = environ.get('BOT_TOKEN', " ")
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
 
 # Bot settings
@@ -51,7 +51,7 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 # post channel auto post new movie
 POST_CHANNELS = list(map(int, (channel.strip() for channel in environ.get('POST_CHANNELS', '-1002696692504').split(','))))
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002696692504'))
-AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', ''))
+AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002696692504'))
 NO_RESULTS_MSG = is_enabled((environ.get("NO_RESULTS_MSG", 'True')), False)
 
 # MongoDB information
